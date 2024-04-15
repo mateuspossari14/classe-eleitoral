@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto - classe eleitoral</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <section>
+        <div class="video-container">
+            <div class="video-container--description"></div>
+            <video id="sourceVideo" controls autoplay>
+                <source src="" type="video/mp4">
+            </video>
+        </div>
+
+        <div class="calculator">
+            <input type="text" id="calculator-display" placeholder="Digite seu ano de nascimento" maxlength="4" autocomplete="off">
+            <div class="calculator-keys">
+                <button class="item item1" onclick="insert('1')">1</button>
+                <button class="item item2" onclick="insert('2')">2</button>
+                <button class="item item3" onclick="insert('3')">3</button>
+                <button class="item item4" onclick="insert('4')">4</button>
+                <button class="item item5" onclick="insert('5')">5</button>
+                <button class="item item6" onclick="insert('6')">6</button>
+                <button class="item item7" onclick="insert('7')">7</button>
+                <button class="item item8" onclick="insert('8')">8</button>
+                <button class="item item9" onclick="insert('9')">9</button>
+                <button class="item item0" onclick="insert('0')">0</button>
+
+                <button id="delete" onclick="del()">DELETAR</button>
+                <button id="send" onclick="send()">CALCULAR</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Desenvolvido por <a href="https://github.com/mateuspossari14" target="_blank">Mateus Possari</a></p>
+    </footer>
+
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>

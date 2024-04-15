@@ -1,0 +1,235 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    background-color: darkblue;
+    font-family: 'Montserrat', sans-serif;
+}
+
+section {
+    gap: 50px;
+    width: 90%;
+    height: 40em;
+    display: flex;
+    padding: 35px;
+    margin: 100px 50px;
+    position: relative;
+    transform: skewY(1deg);
+    background-color: #fff;
+    border-end-start-radius: 10px;
+    box-shadow: 0px 5px 10px #333;
+}
+
+section::before {
+    content: '';
+    top: -60px;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    position: absolute;
+    transform: skewX(-44deg);
+    transform-origin: bottom;
+    background-color: #ececec;
+    border-start-end-radius: 2px;
+    border-bottom: 2px solid #ccc;
+    border-start-start-radius: 10px;
+    box-shadow: 0px 5px 10px #333;
+}
+
+section::after {
+    content: '';
+    top: 0;
+    width: 60px;
+    right: -60px;
+    height: 100%;
+    position: absolute;
+    transform-origin: left;
+    transform: skewY(-47deg);
+    border-end-end-radius: 10px;
+    background-color: #ececec;
+    border-top: 2px solid #ccc;
+    border-end-start-radius: 3px;
+    border-start-end-radius: 10px;
+    border-left: 2px solid #ccc;
+    box-shadow: 0px 5px 10px #333;
+}
+
+.video-container {
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #000;
+}
+
+.video-container video {
+    width: 100%;
+    height: auto;
+    display: none;
+    object-fit: cover;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.video-container .video-container--description {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    align-items: center;
+    letter-spacing: 1.5px;
+    justify-content: center;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.calculator {
+    flex: 1;
+    height: auto;
+    display: flex;
+    border-radius: 5px;
+    flex-direction: column;
+    background-color: #000;
+}
+
+.calculator #calculator-display {
+    color: #fff;
+    font-size: 24px;
+    text-align: right;
+    letter-spacing: 1.2px;
+    padding: 15px 15px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border: 1px solid #000;
+}
+
+#calculator-display::placeholder {
+    color: #fff;
+}
+
+.calculator #calculator-display[type="text"] {
+    outline: 0;
+    background-color: #000;
+}
+
+.calculator .calculator-keys {
+    gap: 15px;
+    border: none;
+    display: grid;
+    height: 100vh;
+    padding: 15px;
+    
+    grid-template-areas:
+        "item1 item2 item3"
+        "item4 item5 item6"
+        "item7 item8 item9"
+        "item0 item0 item0"
+        "delete send send"
+    ;
+}
+
+.calculator .calculator-keys .item {
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 25px;
+    background-color: #2D2D2D;
+}
+
+.calculator .calculator-keys #delete,
+.calculator .calculator-keys #send {
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 25px;
+    letter-spacing: 1.2px;
+    background-color: #DB942A;
+}
+
+footer {
+    color: #fff;
+    display: flex;
+    font-size: 20px;
+    min-height: 200px;
+    align-items: center;
+    letter-spacing: 1.2px;
+    justify-content: center;
+}
+
+footer a {
+    color: #fff;
+}
+
+footer a:hover {
+    color: #DB942A;
+}
+
+
+.calculator .calculator-keys #delete {
+    grid-area: delete;
+}
+
+.calculator .calculator-keys #send {
+    grid-area: send;
+}
+
+.calculator .calculator-keys .item:hover, 
+#delete:hover,
+#send:hover {
+    opacity: 0.9;
+}
+
+.item1 {
+    grid-area: item1;
+}
+
+.item2 {
+    grid-area: item2;
+}
+
+.item3 {
+    grid-area: item3;
+}
+
+.item4 {
+    grid-area: item4;
+}
+
+.item5 {
+    grid-area: item5;
+}
+
+.item6 {
+    grid-area: item6;
+}
+
+.item7 {
+    grid-area: item7;
+}
+
+.item8 {
+    grid-area: item8;
+}
+
+.item9 {
+    grid-area: item9;
+}
+
+.item0 {
+    grid-area: item0;
+}
