@@ -1,0 +1,65 @@
+@media (min-width: 320px) and (max-width: 770px) {
+    section {
+        height: 100%;
+        padding: 20px;
+        overflow: hidden;
+        margin: 80px auto 0px;
+        flex-direction: column;
+        border-radius: 5px;
+    }
+
+    section::before, 
+    section::after {
+        display: none;
+    }
+
+    .video-container {
+        flex: 1;
+    }
+
+    .video-container .video-container--description {
+        padding: 2px;
+        font-size: 10px;
+        font-weight: 300;
+    }
+
+    .calculator {
+        flex: 2;
+        height: 100%;
+    }
+
+    .calculator #calculator-display {
+        font-size: 16px;
+    }
+
+    .calculator .calculator-keys {
+        height: auto;
+
+        grid-template-areas:
+            "item1 item2 item3"
+            "item4 item5 item6"
+            "item7 item8 item9"
+            "item0 item0 send"
+            "delete delete send"
+        ;
+    }
+
+    .calculator .calculator-keys .item {
+        padding: 15px;
+        font-size: 10px;
+    }
+
+    .calculator .calculator-keys #delete,
+    .calculator .calculator-keys #send {
+        font-size: 9px;
+    }
+
+    #delete {
+        padding: 10px;
+    }
+
+    footer {
+        width: 100%;
+        font-size: 12px;
+    }
+}
