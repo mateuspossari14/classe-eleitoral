@@ -64,10 +64,10 @@ section::after {
 
 .video-container {
     flex: 2;
-    display: flex;
+    display: none;
     align-items: center;
-    justify-content: center;
     flex-direction: column;
+    justify-content: center;
     background-color: #000;
 }
 
