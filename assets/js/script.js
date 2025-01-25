@@ -32,29 +32,33 @@ const send = () => {
             alert('Sua idade é muito avançada, tente novamente!');
 
         else if (ageUser < 16) {
+            document.querySelector('.video-container').style.display = 'flex';
             imageDescription.textContent = 'Sua classe eleitoral: não eleitor';
             video.style.display = 'block';
             video.src = './assets/videos/students.mp4';
             video.load();
             video.play();
+            refresh();
         }
 
-        else if (ageUser >= 16 && ageUser <= 18) {
+        else if (ageUser >= 16 && ageUser <= 17) {
+            document.querySelector('.video-container').style.display = 'flex';
             imageDescription.textContent = 'Sua classe eleitoral: eleitor facultativo';
             video.style.display = 'block';
             video.src = './assets/videos/adolecents.mp4';
             video.load();
             video.play();
+            refresh();
         }
 
-        else if (ageUser > 18 && ageUser <= 70) {
-
+        else if (ageUser >= 18 && ageUser <= 70) {
+            document.querySelector('.video-container').style.display = 'flex';
             imageDescription.textContent = 'Sua classe eleitoral: eleitor obrigatório';
             video.style.display = 'block';
             video.src = './assets/videos/adult.mp4';
             video.load();
             video.play();
-
+            refresh();
         }
 
         else {
@@ -63,6 +67,9 @@ const send = () => {
             video.src = './assets/videos/old_people.mp4';
             video.load();
             video.play();
+            refresh();
         };
     };
 };
+
+let refresh = () => setInterval(() => location.reload(), 10000);
