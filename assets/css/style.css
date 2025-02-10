@@ -118,9 +118,13 @@ section::after {
     color: #fff;
 }
 
-.calculator #calculator-display[type="text"] {
+.calculator #calculator-display[type="number"] {
     outline: 0;
     background-color: #000;
+}
+
+.calculator #calculator-display[type="number"]::-webkit-inner-spin-button {
+    appearance: none;
 }
 
 .calculator .calculator-keys {
